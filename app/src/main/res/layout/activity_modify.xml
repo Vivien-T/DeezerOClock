@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ModifyActivity">
+
+    <TimePicker
+        android:id="@+id/timeSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:timePickerMode="spinner"
+        app:layout_constraintBottom_toTopOf="@+id/imageLundi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/chkEveryday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="CheckBox"
+        app:layout_constraintBottom_toTopOf="@+id/btnDelete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageLundi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:onClick="ClickJour"
+        app:layout_constraintBottom_toTopOf="@+id/chkEveryday"
+        app:layout_constraintEnd_toStartOf="@+id/imageMardi"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/lettrel" />
+
+    <ImageView
+        android:id="@+id/imageMardi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="ClickJour"
+        app:layout_constraintEnd_toStartOf="@+id/imageMercredi"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageLundi"
+        app:layout_constraintTop_toTopOf="@+id/imageLundi"
+        app:srcCompat="@drawable/lettrem" />
+
+    <ImageView
+        android:id="@+id/imageMercredi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="ClickJour"
+        app:layout_constraintEnd_toStartOf="@+id/imageJeudi"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageMardi"
+        app:layout_constraintTop_toTopOf="@+id/imageMardi"
+        app:srcCompat="@drawable/lettrem" />
+
+    <ImageView
+        android:id="@+id/imageJeudi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="ClickJour"
+        app:layout_constraintEnd_toStartOf="@+id/imageVendredi"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageMercredi"
+        app:layout_constraintTop_toTopOf="@+id/imageMercredi"
+        app:srcCompat="@drawable/lettrej" />
+
+    <ImageView
+        android:id="@+id/imageVendredi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="ClickJour"
+        app:layout_constraintEnd_toStartOf="@+id/imageSamedi"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageJeudi"
+        app:layout_constraintTop_toTopOf="@+id/imageJeudi"
+        app:srcCompat="@drawable/lettrev" />
+
+    <ImageView
+        android:id="@+id/imageSamedi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="ClickJour"
+        app:layout_constraintEnd_toStartOf="@+id/imageDimanche"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageVendredi"
+        app:layout_constraintTop_toTopOf="@+id/imageVendredi"
+        app:srcCompat="@drawable/lettres" />
+
+    <ImageView
+        android:id="@+id/imageDimanche"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="ClickJour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageSamedi"
+        app:layout_constraintTop_toTopOf="@+id/imageSamedi"
+        app:srcCompat="@drawable/lettred" />
+
+    <Button
+        android:id="@+id/btnValidate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:onClick="clickValider"
+        android:text="Valider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnDelete"
+        app:layout_constraintTop_toTopOf="@+id/btnDelete" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:onClick="clickDelete"
+        android:text="Supprimer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnValidate"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
